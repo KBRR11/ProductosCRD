@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=-1, maximum-scale=1, user-scalable=no">
+    <title>
+         CRUD Productos
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <h2>Productos CRUD</h2>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Producto*</label><label class="validacion-error hide" id="ProductoValidationError">Este campo es obligatorio.</label>
+                        <input type="text" name="producto" id="producto">
+                    </div>
+                    <div>
+                        <label>Precio</label>
+                        <input type="text" name="precio" id="precio">
+                    </div>
+                    <div>
+                        <label>cantidad</label>
+                        <input type="text" name="cantidad" id="cantidad">
+                    </div>
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" class= "btn btn-primary"  value="ADD">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Nro</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                
+            </td>
+            
+        </tr>
+    </table>
+    <div id="resultados">
+        <section class="st">
+            <label >Subtotal: <input type="text" value="0.00" id="cajast"></label>
+        </section>
+        <section class="impuesto">
+            <label >Igv: <input type="text" value="0.00" id="cajaimp"></label>
+        </section>
+        <section class="to">
+            <label >Total: <input type="text" value="0.00" id="cajato"></label>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
